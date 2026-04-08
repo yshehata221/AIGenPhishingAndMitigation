@@ -25,7 +25,7 @@ AI-Phishing-Project/
 │       └── real_phishing.csv
 ├── docs/
 │   ├── Human (Responses).xlsx      # Human evaluation response data
-│   └── output.pdf                  # Dissertation or report output
+│   └── output.pdf                  # SPSS output result
 ├── prompts/
 │   └── prompt_bank.md              # Prompts used to generate phishing emails
 ├── src/
