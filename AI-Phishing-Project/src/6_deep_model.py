@@ -87,6 +87,7 @@ model = Sequential([
 # adam is an adaptive learning rate optimiser well suited to sequence models
 model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
 
+model.build(input_shape=(None, max_len))
 model.summary()
 
 # ====================Training===================
@@ -101,7 +102,7 @@ history = model.fit(X_train_pad, y_train, epochs=3, batch_size=32, validation_sp
 print("Evaluating model...")
 
 # predict() returns a probability for each email
-threshold at 0.5 to convert to binary class predictions.
+# threshold at 0.5 to convert to binary class predictions.
 y_pred_prob = model.predict(X_test_pad)
 y_pred = (y_pred_prob > 0.5).astype(int)
 
